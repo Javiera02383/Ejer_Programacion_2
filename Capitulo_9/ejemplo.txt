@@ -1,0 +1,13 @@
+Ingrese los puntos para el Trapezoide (x1 y1 x2 y2 x3 y3 x4 y4):
+1 1 4 1 3 5 2 5
+Ingrese los puntos para el Paralelogramo (x1 y1 x2 y2 x3 y3 x4 y4):
+0 0 5 0 4 4 1 4
+Ingrese los puntos para el Rectángulo (x1 y1 x2 y2 x3 y3 x4 y4):
+0 0 6 0 6 3 0 3
+Ingrese los puntos para el Cuadrado (x1 y1 x2 y2 x3 y3 x4 y4):
+2 2 6 2 6 6 2 6
+
+Área del Trapezoide: 11.0
+Área del Paralelogramo: 16.0
+Área del Rectángulo: 18.0
+Área del Cuadrado: 16.0

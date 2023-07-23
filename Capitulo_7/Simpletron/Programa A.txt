@@ -1,0 +1,37 @@
+PROGRAMA
+a) Usar un ciclo controlado por centinela para leer 10 números positivos. Calcular e imprimir la suma.
+
+
+00   1020	// Pedir x al usuario
+01   2021       // Cargar y en el acumulador
+02   3020       // Sumar x+y
+03   2121	// Guardar el valor de y (y=z)
+04   1022	//Pide z al usuario
+05   2022	// Carga z en el acumulador
+06   4109 4108	// Cuando z es un numero negativo; saltar
+07   2120	// x=z
+08   4001	// Se repite el ciclo 
+09   1121	// Escribe y (el resultado de la suma)
+10   4300	// Alto al programa
+
+
+20   0000       // x
+21   0000       // y para sumar
+22   0000       // z (centinela)
+
+
+00 1001   // Leer el primer número
+01 2102   // Almacenar el número en la posición de memoria 02
+02 3203   // Sumar el número a la variable acumulador en la posición de memoria 03
+03 1103   // Incrementar el contador de números leídos
+04 2103   // Almacenar el contador de números leídos en la posición de memoria 03
+05 4009   // Saltar a la posición de memoria 09 si no se han leído 10 números
+06 4300   // Detener la ejecución del programa
+07 0000   // Espacio de memoria para contar los números leídos
+08 0000   // Espacio de memoria para almacenar el total acumulado
+09 1011   // Imprimir el valor acumulado de la posición de memoria 11
+10 4300   // Detener la ejecución del programa
+11 0000   // Espacio de memoria para imprimir el resultado
+
+
+

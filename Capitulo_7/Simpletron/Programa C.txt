@@ -1,0 +1,85 @@
+PROGRAMA 
+c) Leer una serie de números, determinar e imprimir el número más grande. El primer número leído indica
+cuántos números deben procesarse.
+
+00	1026	//Lee un número y lo almacena en la ubicación 26
+01	2026	//Carga el número almacenado en la ubicación 26
+02	4100	//Bifurcación negativa a la ubicación 00
+03	2026	//Carga el número almacenado en la ubicación 26
+04	4200	//Bifurcación Cero a la ubicación 00 
+05	1024	//Lee un número y lo almacena en la ubicación 24
+06	2025	//Carga el valor almacenado en la ubicación 25
+07	3126	//Resta el valor almacenado en la ubicación 26
+08	4221	//Bifurcación Cero a la ubicación 21
+09	1023	//Recibe un número y lo almacena en la ubicación 23
+10	2024	//Carga el número de la ubicación 24
+11	3123	//Resta el número de la ubicación 23
+12	4015	//Bifurca positivo a la ubicación 15
+13	2023	//Carga el número almacenado en la ubicación 23
+14	2124	//Almacena el número en la ubicación 24
+15	2025	//Carga la variable de la ubicación 25
+16	3027	//Suma el contenido de la ubicación 27
+17	2125	//Almacena el resultado en la ubicación 25
+18	2025	//Carga el contenido en la ubicación 25
+19	3126	//Resta el contenido de la ubicación 26
+20	4109	//Bifurca negativo a la ubicación 24
+21	1124	//Imprime la ubicación 24
+22	4300	//Fin del programa 
+
+23	0000	//Numero
+24	0000	//Mayor 
+25	0000	//Contador: Inicializado en 1
+26	0000	//Limite
+27	0000	//Uno: Inicializado en 1 e inicializado en 0
+
+
+
+
+
+
+
+
+00 READ cantidad     ; Lee el primer número que indica cuántos números procesar
+01 LOAD maximo       ; Carga el valor inicial del máximo con el primer número leído
+02 SUBTRACT 1        ; Resta 1 a la cantidad de números para controlar el bucle
+03 STORE cantidad    ; Almacena el valor actualizado de cantidad
+04 READ numero       ; Lee el primer número de la serie
+05 STORE maximo      ; Almacena el número leído como el máximo provisional
+06 SUBTRACT 1        ; Resta 1 a la cantidad de números restantes
+07 STORE cantidad    ; Almacena el valor actualizado de cantidad
+08 BRANCHZERO 10     ; Salta a la instrucción 10 si la cantidad es igual a 0
+09 BRANCH 04         ; Salta a la instrucción 04 para leer el siguiente número
+10 WRITE maximo      ; Escribe el número máximo encontrado
+11 HALT              ; Detiene la ejecución del programa
+
+
+00 1050       ; Lee el primer número que indica cuántos números procesar
+01 2012      ; Carga el valor inicial del máximo con el primer número leído
+02 3101     ; Resta 1 a la cantidad de números para controlar el bucle
+03 2150      ; Almacena el valor actualizado de cantidad
+04 1051       ; Lee el primer número de la serie
+05 3121     ; Almacena el número leído como el máximo provisional
+06 4109     ; Resta 1 a la cantidad de números restantes
+07 2012      ; Almacena el valor actualizado de cantidad
+08 3111     ; Salta a la instrucción 10 si la cantidad es igual a 0
+09 4004     ; Salta a la instrucción 04 para leer el siguiente número
+10 2012     ; Carga el valor máximo actual en el acumulador
+11 2100     ; Almacena el valor del acumulador en la memoria
+12 4300          ; Detiene la ejecución del programa
+
+
+00 1050       ; Lee el primer número que indica cuántos números procesar
+01 2012      ; Carga el valor inicial del máximo con el primer número leído
+02 3101     ; Resta 1 a la cantidad de números para controlar el bucle
+03 2150      ; Almacena el valor actualizado de cantidad
+04 1051       ; Lee el primer número de la serie
+05 3121     ; Compara el número leído con el máximo actual
+06 4109     ; Salta a la instrucción 09 si el número leído es menor o igual al máximo actual
+07 2012     ; Carga el número leído como el nuevo máximo actual
+08 3111     ; Salta a la instrucción 11 para almacenar el nuevo máximo actual en memoria
+09 4004     ; Salta a la instrucción 04 para leer el siguiente número
+10 2012     ; Carga el valor máximo actual en el acumulador
+11 2100     ; Almacena el valor del acumulador en la memoria
+12 4300          ; Detiene la ejecución del programa
+
+

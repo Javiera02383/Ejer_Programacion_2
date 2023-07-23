@@ -1,0 +1,32 @@
+PROGRAMA 
+b) Usar un ciclo controlado por contador para leer siete números, algunos positivos y otros negativos, y
+calcular e imprimir su promedio.
+
+00	1020	//Lee un número y lo almacena en la ubicación 20
+01	2020	//Carga el número almacenado en la ubicación 20
+02	4100	//Bifurcación negativa a la ubicación 00
+03	2020	//Carga el valor de la ubicación 20
+04	4200	//Bifurcación 0 a la ubicación 00
+05	1024	//Lee un número y lo almacena en la ubicación 24
+06	2024	//Carga el valor almacenado en la ubicación 24 
+07	3023	//Suma el valor de la ubicación 23 al acumulador 
+08	2123	//Almacena la suma en la ubicación 23
+09	2121	//Carga el valor almacenado en la ubicación 21
+10	2022	//Suma el valor de la ubicación 22 
+11	2121	//Almacena la suma en la ubicación 21
+12	2021	//Carga el valor de la ubicación 21
+13	3120	//Resta el valor almacenado en la ubicación 20
+14	4005	//Bifurca en la ubicación 05, si la diferencia es positiva
+15	2021	//Carga la variable de la ubicación 21 
+16	3223	//Divide el contenido de la ubicación 18 entre el contenido del acumulador 
+17	2125	//Almacena el resultado en la ubicación 25
+18	1125	//Imprime el resultado 
+19	4300	//Fin del programa
+
+20	0000	//Limite
+21	0000	//Contador: Inicializado en 0
+22	0000	//Uno: Inicializado en 1
+23	0000	//Suma: Inicializado en 0
+24	0000	//Variable 
+
+

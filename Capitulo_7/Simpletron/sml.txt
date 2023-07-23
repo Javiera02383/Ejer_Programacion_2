@@ -1,0 +1,137 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class SML {
+    public static void main(String[] args) {
+        final int READ = 10;
+        final int WRITE = 11;
+        final int ENTER = 12;
+        final int ENTERSTRING = 13;
+        final int SHOWSTRING = 14;
+        final int LOAD = 20;
+        final int STORE = 21;
+        final int ADD = 30;
+        final int SUBTRACT = 31;
+        final int DIVIDE = 32;
+        final int MULTIPLY = 33;
+        final int POW = 34;
+        final int REST = 35;
+        final int BRANCH = 40;
+        final int BRANCHNEG = 41;
+        final int BRANCHZERO = 42;
+        final int HALT = 43;
+        final int CONTINUE = 44;
+
+        int instruccion = 0;
+        Scanner input = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("00");
+
+        int acumulador = 0;
+        int[] memoria = new int[100]; // Cambiado el tipo de datos a int[]
+        String[] cadenaTexto = new String[100]; // Nuevo array para almacenar cadenas de texto
+        int posicion = 0, indice = 0;
+        int operacion;
+        boolean halt = false;
+
+        System.out.println("LENGUAJE DE MAQUINA SIMPLETRON\n"
+                + "¡Bienvenido a Simpletron Machine Language!\n"
+                + "Por favor, ingrese una instruccion a la vez\n"
+                + "\nIngrese su codigo a continuacion:\n-99 + ENTER = EJECUTAR\n");
+
+        // Ingresa los valores en la memoria
+        int posicionMemoria = 0;
+
+        while (instruccion != -99) {
+            System.out.printf(df.format(posicionMemoria) + " ? ");
+            instruccion = input.nextInt();
+
+            operacion = instruccion / 100;
+            int registroInstruccion = instruccion % 100;
+
+            if (registroInstruccion >= 0 && registroInstruccion < 100 && (operacion == READ || operacion == WRITE
+                    || operacion == LOAD || operacion == STORE || operacion == ADD || operacion == SUBTRACT
+                    || operacion == DIVIDE || operacion == MULTIPLY || operacion == BRANCH || operacion == BRANCHNEG
+                    || operacion == BRANCHZERO || operacion == HALT || operacion == CONTINUE || operacion == POW
+                    || operacion == REST || operacion == ENTER || operacion == ENTERSTRING
+                    || operacion == SHOWSTRING)) {
+
+                memoria[posicion] = instruccion;
+                posicion++;
+                posicionMemoria++;
+
+            } else {
+                System.out.println("Indice u operacion invalida");
+            }
+        }
+
+        System.out.println("¡Carga del programa completa!");
+        System.out.println("Iniciando la ejecucion del programa...");
+
+        // Recorre la memoria ejecutando los comandos
+        for (int i = 0; i < 100 && !halt; i++) {
+            instruccion = memoria[i];
+            operacion = instruccion / 100;
+            indice = instruccion % 100;
+
+            if (operacion == READ) {
+                System.out.print("Ingrese un numero entero: ");
+                memoria[indice] = input.nextInt();
+            } else if (operacion == WRITE) {
+                System.out.println("Salida: " + memoria[indice]);
+            } else if (operacion == LOAD) {
+                acumulador = memoria[indice];
+            } else if (operacion == STORE) {
+                memoria[indice] = acumulador;
+            } else if (operacion == ADD) {
+                acumulador += memoria[indice];
+            } else if (operacion == SUBTRACT) {
+                acumulador -= memoria[indice];
+            } else if (operacion == DIVIDE) {
+                int valor = memoria[indice];
+                if (valor != 0) {
+                    acumulador /= valor;
+                } else {
+                    System.out.println("Error: division por cero");
+                    halt = true;
+                }
+            } else if (operacion == MULTIPLY) {
+                acumulador *= memoria[indice];
+            } else if (operacion == BRANCH) {
+                i = indice;
+            } else if (operacion == BRANCHNEG) {
+                if (acumulador < 0) {
+                    i = indice;
+                }
+            } else if (operacion == BRANCHZERO) {
+                if (acumulador == 0) {
+                    i = indice;
+                }
+            } else if (operacion == HALT) {
+                System.out.println("Ejecucion finalizada.");
+                halt = true;
+            } else if (operacion == CONTINUE) {
+                // No hace nada, continua con la siguiente instruccion
+            } else if (operacion == POW) {
+                acumulador = (int) Math.pow(acumulador, memoria[indice]);
+            } else if (operacion == REST) {
+                int valor = memoria[indice];
+                if (valor != 0) {
+                    acumulador %= valor;
+                } else {
+                    System.out.println("Error: division por cero");
+                    halt = true;
+                }
+            } else if (operacion == ENTER) {
+                System.out.print("Ingrese un numero entero: ");
+                memoria[indice] = input.nextInt();
+            } else if (operacion == ENTERSTRING) {
+                System.out.print("Ingrese una cadena de texto: ");
+                input.nextLine(); // Consumir el salto de línea pendiente
+                cadenaTexto[indice] = input.nextLine(); // Almacenar la cadena en el array de cadenas de texto
+            } else if (operacion == SHOWSTRING) {
+                System.out.println("Salida de cadena: " + cadenaTexto[indice]); // Mostrar la cadena almacenada
+            }
+        }
+        input.close();
+    }
+}
