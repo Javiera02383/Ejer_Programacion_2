@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class PruebaFactura {
@@ -13,7 +14,7 @@ public class PruebaFactura {
 
 		System.out.println("====DATOS INICIALES====");
 
-		Factura factura1 = new Factura();
+		Factura1 factura1 = new Factura1();
 
 		factura1.obtenerDatosFactura();
 

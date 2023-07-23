@@ -1,3 +1,4 @@
+
 /*(La clase Factura) Cree una clase llamada Factura que una ferretería podría utilizar para representar una
 factura para un artículo vendido en la tienda. Una Factura debe incluir cuatro piezas de información como variables
 de instancia: un número de pieza (tipo String), la descripción de la pieza (tipo String), la cantidad de artículos de ese
@@ -8,7 +9,7 @@ decir, que multiplique la cantidad de artículos por el precio de cada uno) y de
 double. Si la cantidad no es positiva, debe establecerse en 0. Si el precio por artículo no es positivo, debe establecerse
 en 0.0. Escriba una aplicación de prueba llamada PruebaFactura, que demuestre las capacidades de la clase Factura. */
 
-public class Factura {
+public class Factura1 {
 
 	private String numPza;
 	private String descPza;
@@ -16,7 +17,7 @@ public class Factura {
 	private double precPza;
 
 	// Constructor
-	public Factura() {
+	public Factura1() {
 		this.numPza = "A0000";
 		this.descPza = "Vacio";
 		this.qtyPzas = 0;
