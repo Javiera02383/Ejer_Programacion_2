@@ -1,4 +1,4 @@
-package Tareas_unidad_1.Capitulo_3.ej_3_11;
+package Capitulo_3.ej_3_11;
 
 // Fig. 3.9: PruebaCuenta.java
 // Entrada y salida de números de punto flotante con objetos Cuenta.

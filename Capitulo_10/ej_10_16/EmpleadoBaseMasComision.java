@@ -41,4 +41,5 @@ public class EmpleadoBaseMasComision extends EmpleadoPorComision {
         return String.format("%s %s; %s: $%,.2f", "con salario base", super.toString(), "salario base",
                 obtenerSalarioBase());
     }
+
 }

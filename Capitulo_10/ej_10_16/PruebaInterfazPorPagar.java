@@ -31,7 +31,10 @@ public class PruebaInterfazPorPagar {
         // procesa en forma generica cada elemento en el arreglo objetosPorPagar
         for (PorPagar porPagarActual : objetosPorPagar) {
             // si un objeto es unEmpleadoBaseMasComision,aumente su salariobase por un 10%
-            if (porPagarActual instanceof EmpleadoBaseMasComision) { // verdadero si, el objeto al que apunta la variable PORPAGARACTUAL, es claramente una instancia de la clase PorPagarActual, que hereda de EmpleadoBaseMasComision
+            if (porPagarActual instanceof EmpleadoBaseMasComision) { // verdadero si, el objeto al que apunta la
+                                                                     // variable PORPAGARACTUAL, es claramente una
+                                                                     // instancia de la clase PorPagarActual, que hereda
+                                                                     // de EmpleadoBaseMasComision
                 ((EmpleadoBaseMasComision) porPagarActual).establecerSalarioBase(
                         (((EmpleadoBaseMasComision) porPagarActual).obtenerSalarioBase() * .1) +
                                 ((EmpleadoBaseMasComision) porPagarActual).obtenerSalarioBase());

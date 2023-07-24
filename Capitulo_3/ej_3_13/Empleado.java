@@ -1,4 +1,4 @@
-package Tareas_unidad_1.Capitulo_3.ej_3_13;
+package Capitulo_3.ej_3_13;
 
 /*(La clase Empleado) Cree una clase llamada Empleado, que incluya tres variables de instancia: un primer
 nombre (tipo String), un apellido paterno (tipo String) y un salario mensual (double). Su clase debe tener un constructor

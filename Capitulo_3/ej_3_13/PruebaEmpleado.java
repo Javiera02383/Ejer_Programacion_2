@@ -1,4 +1,4 @@
-package Tareas_unidad_1.Capitulo_3.ej_3_13;
+package Capitulo_3.ej_3_13;
 
 import java.util.Scanner;
 

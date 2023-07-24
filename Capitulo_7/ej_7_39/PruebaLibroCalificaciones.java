@@ -1,4 +1,4 @@
-package Tareas_unidad_1.Capitulo_7.ej_7_39;
+package Capitulo_7.ej_7_39;
 
 import java.util.Scanner;
 

@@ -1,0 +1,16 @@
+11.14 (Condiciones excepcionales) 
+
+Enumere las diversas condiciones excepcionales que han ocurrido en programas,
+a lo largo de este texto hasta ahora. Mencione todas las condiciones excepcionales adicionales que pueda. Para
+cada una de ellas, describa brevemente la manera en que un programa manejaría la excepción, utilice las técnicas de
+manejo de excepciones que se describen en este capítulo. Algunas excepciones típicas son la división entre cero, y el
+índice de arreglo fuera de límites.
+
+RESPUESTA
+
+1. ArithmeticException:  (“/ by zero”)
+2. InputMismatchException: ocurre cuando el método nextInt de Scanner recibe una cadena (string) que no representa un entero válido.
+3. NullPointerException: Ocurre cuando se intenta acceder o manipular un objeto que no ha sido inicializado
+4. NumberFormatException: Ocurre cuando se intenta convertir una cadena en un tipo numérico (por ejemplo, int o double) y 
+la cadena no tiene el formato adecuado para realizar la conversión.
+5. FileNotFoundException: Ocurre cuando se intenta abrir o leer un archivo que no existe en el sistema.

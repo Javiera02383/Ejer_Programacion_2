@@ -1,0 +1,17 @@
+11.15 (Excepciones y falla de los constructores)
+
+Hasta este capítulo, hemos visto que tratar con los errores detectados
+por los constructores es algo difícil. Explique por qué el manejo de excepciones es un medio efectivo para tratar
+con las fallas en los constructores.
+
+RESPUESTA
+El manejo de excepciones es un medio efectivo para tratar con las fallas en los constructores porque permite 
+a los desarrolladores capturar y manejar las excepciones que se producen durante la construcción de un objeto. 
+Esto puede ayudar a evitar que el programa se bloquee y puede permitir a los desarrolladores tomar medidas para 
+corregir el error que causó la excepción.
+
+El manejo de excepciones se puede realizar utilizando la instrucción try-catch. La instrucción try rodea el 
+código que se debe probar en busca de excepciones. Si se produce una excepción, la instrucción catch captura 
+la excepción y se ejecuta el código dentro del bloque catch. El código dentro del bloque catch puede utilizarse 
+para corregir el error que causó la excepción, o puede utilizarse para informar al usuario del error y tomar 
+medidas para evitar que el programa se bloquee.

@@ -1,4 +1,4 @@
-package Tareas_unidad_1.Capitulo_3.ej_extra;
+package Capitulo_3.ej_extra;
 
 import javax.swing.JOptionPane;
 

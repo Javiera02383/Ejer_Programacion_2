@@ -11,8 +11,7 @@ public class EmpleadoAsalariado extends Empleado {
  super(primerNombre, apellidoPaterno, numeroSeguroSocial);
 
  if (salarioSemanal < 0.0)
- throw new IllegalArgumentException(
- “El salario semanal debe ser >= 0.0”);
+ throw new IllegalArgumentException(“El salario semanal debe ser >= 0.0”);
 
  this.salarioSemanal = salarioSemanal;
  }

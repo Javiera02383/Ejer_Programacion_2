@@ -1,4 +1,4 @@
-package Tareas_unidad_1.Capitulo_3.ej_3_11;
+package Capitulo_3.ej_3_11;
 
 /* Fig. 3.8: Cuenta.j
 // La clase Cuenta con una variable de instancia double llamada saldo y un constructor
