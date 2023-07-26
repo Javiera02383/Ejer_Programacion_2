@@ -14,3 +14,5 @@ RESPUESTA
 4. NumberFormatException: Ocurre cuando se intenta convertir una cadena en un tipo numérico (por ejemplo, int o double) y 
 la cadena no tiene el formato adecuado para realizar la conversión.
 5. FileNotFoundException: Ocurre cuando se intenta abrir o leer un archivo que no existe en el sistema.
+6. oiexception
+
